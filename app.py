@@ -10,17 +10,15 @@ def get_csv():
 
 @app.route("/")
 def index():
-    template = '__init__.py/template/index.html'
     movieList = get_csv()
-    return render_template(template, movies = movieList)
+    return render_template('index.html', movies = movieList)
 
 @app.route("/<Movie_Title>/")
 def detail(row_id):
-    template = 'template/index.html'
     movieList = get_csv()
     for movie in movieList:
         if movie['Movie_Title'] == movie.Movie_Title:
-            return render_template(template, object = movie)
+            return render_template('index.html', object = movie)
 
 if __name__ == '__main__':
     app.run(debug = True, use_reloader = True)
