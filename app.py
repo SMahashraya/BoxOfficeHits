@@ -10,13 +10,13 @@ def get_csv():
 
 @app.route("/")
 def index():
-    template = 'index.html'
+    template = './template/index.html'
     movieList = get_csv()
     return render_template(template, movies = movieList)
 
 @app.route("/<Movie_Title>/")
 def detail(row_id):
-    template = 'index.html'
+    template = './template/index.html'
     movieList = get_csv()
     for movie in movieList:
         if movie['Movie_Title'] == movie.Movie_Title:
