@@ -1,95 +1,115 @@
-// javaScript to load table data into index.html. If a date is provided as a filter, retrieve
-// the date and reload with filtered data only into the DOM.
-// data  is defined in  data.js
-// Author. Siva V. 
-var tableData = data;
+function init() {
+  var selector = Plotly.d3.select("#selDataset");
 
-//Getting a reference to the button on the page with the id propertyfilter-btn 
-var filtButton = d3.select("#filter-btn");
-// Getting a reference to the input element on the page with the id property set to 'datetime'
-var inputDate = d3.select("#datetime");
+  d3.json("/names").then((sampleNames) => {
+      sampleNames.forEach((sample) => {
+          selector
+              .append("option")
+              .text(sample)
+              .property("value", sample);
+      });
+      // dropdown_select.data(sampleNames)
+      // .enter()
+      // .append("option")
+      // .attr("value",data)
+      // .text(data)
 
-//Create a var for the d3select of tbody.
-var inputTbody = d3.select("tbody");
-
-//Getting a reference to state and other fields. 
-var inputState = d3.select("#state");
-var inputCountry = d3.select("#country")
-var inputShape   = d3.select("#shape")
-
-var defDate = '1/1/2010';
-var loadFiltData = "n";
-var dateInput ;
-
-// Select all tbody from using d3 select and add  table rows dynamically from tableData.
-function loadTableData(dataArray) {
-d3.select("tbody")
-  .selectAll("tr")
-  .data(dataArray)
-  .enter()
-  .append("tr")
-  .html(function(d) {
-    return `<td>${d.datetime}</td> <td>${d.city}</td> <td>${d.state}</td> <td>${d.country}</td>
-            <td>${d.shape}</td> <td>${d.durationMinutes}</td> <td>${d.comments}</td>     `;
+      const firstSample = sampleNames[0];
+      console.log(firstSample)
+      buildMetadata(firstSample);
+      buildBubble(firstSample);
+      buildPie(firstSample);
   });
 }
 
-//Filter the data based on input parameters like data and only return values for which
-// //criteria is satisfied. 
-// function filterData(dateV,stateV,countryV) {
-//   console.log("In filterData" + date)
-//   if (date)
-//     var filtData = tableData.filter(fData => (fData.datetime == dateV) && (fData.state == stateV) );
-//     //loadFiltData = 'y';
-//     console.log("loadFiltData " + FiltData)
-//     console.log(filtData);
-//     return(filtData)
-      
-// }
+function buildMetadata(sample) {
+  console.log("You're in buildMetadata")
+  var url = `/metadata/${sample}`
+  d3.json(url).then(function(response) {
+      console.log(response)
+      var selectMetadata = d3.select("#sample-metadata");
+      // selectMetadata.html("");
+      selectMetadata.selectAll("p").remove();
+      Object.entries(response).forEach(([key, value]) => {
+        selectMetadata.append("p").text(`${key}: ${value}`);
+      }); 
+      // {
+        // console.log(response)
+        //   var row = selectMetadata.append("p");
+        //   row.text(`${key}: ${value}`);
+        //   console.log(row)
+        //   console.log(row.text)
+      // });
+  });
+};
 
-//Main logic.
-// Load all the table data of UFO sightings and render in html template.
+function buildBubble(sample) {
+  console.log("You're in buildBubble")
+  var url = `/samples/${sample}`
+  d3.json(url).then((data) => {
+      var x_values = data.otu_ids;
+      var y_values = data.sample_values;
+      var m_size = data.sample_values;
+      var m_colors = data.otu_ids;
+      var t_values = data.otu_labels;
 
-if (loadFiltData == 'y') {
-  console.log("in filt data y")
-  finalData = filtData;
-  }
-else {
-  console.log("in filt data n")
-  finalData = tableData;
-  }
-console.log("First time main logic")
-console.log(finalData)
-inputTbody.html("");
-loadTableData(finalData)
+      var layout = {
+        margin: { t: 0 },
+        hovermode: "closest",
+        xaxis: { title: "OTU ID" }
+      };
 
-// User clicks the button to filter data
-filtButton.on("click", function() {
+      var data = [{
+          x: x_values,
+          y: y_values,
+          text: t_values,
+          mode: "markers",
+          marker: {
+              color: m_colors,
+              size: m_size,
+              colorscale: "Fire"
+          }
+      }];
 
- // Prevent the whole page from refreshing.
- d3.event.preventDefault();
+      Plotly.newPlot("bubble", data, layout)
+  });
+};
 
- // Get the value property of the input element
- var dateValue = inputDate.property("value");
- var stateValue = inputState.property("value");
+function buildPie(sample) {
+  console.log("You're in buildPie")
+  var url = `/samples/${sample}`
+  d3.json(url).then((data) => {
+      var pie_labels = data.otu_ids.slice(0,11);
+      var pie_values = data.sample_values.slice(0,11);
+      var pie_desc = data.otu_labels.slice(0,11);
+      console.log(pie_labels)
+      console.log(pie_values)
+      console.log(pie_desc)
 
- console.log(" in filtbutton.on code ")
- console.log("dateValue  " + dateValue);
- console.log("stateValue " + stateValue);
- console.log(" after getting date/state value")
- var filtData = tableData.filter(fData => (fData.datetime == dateValue) && (fData.state == stateValue) ) ;
- console.log(filtData) 
- loadFiltData = "y";
- if (loadFiltData == 'y') {
-  console.log("in filt data y")
-  finalData = filtData;
-  }
-else {
-  console.log("in filt data n")
-  finalData = tableData;
-  }
-console.log(finalData)
-//Clear all previuos data from UFO table
-inputTbody.html("");
-loadTableData(finalData)
-});
+      var layout = {
+        margin: { t: 0, l: 0 }
+      };
+
+      var data = [{
+          values: pie_values,
+          labels: pie_labels,
+          type: "pie",
+          name: "Top 10 Bellybutton Biodiversity Samples",
+          textinfo: "percent",
+          text: pie_desc,
+          textposition: "inside",
+          hoverinfo: "label+value+text+percent" 
+      }];
+
+      Plotly.plot("pie", data, layout)
+  })
+}
+
+function optionChanged(newSample) {
+  console.log("optionchanged detected and new sample selected")
+  console.log("new sample: " + newSample )
+  buildMetadata(newSample);
+  buildBubble(newSample);
+  buildPie(newSample);
+}
+init();
