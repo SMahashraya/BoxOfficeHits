@@ -4,14 +4,24 @@ app = Flask(__name__)
 import csv
 
 def get_csv():
-    p = './db/movies.csv'
-    f = open(p, 'r')
-    return list(csv.DictReader(f))
+    csv_path = './db/movies.csv'
+    csv_file = open(csv_path, 'r')
+    csv_obj = csv.DictReader(csv_file)
+    csv_list = list(csv_obj)
+    return csv_list
+# def get_csv():
+#     p = './db/movies.csv'
+#     f = open(p, 'r')
+#     return list(csv.DictReader(f))
 
 @app.route("/")
 def index():
-    movieList = get_csv()
-    return render_template('index.html', movies = movieList)
+    object_list = get_csv()
+    return render_template('index.html', object_list=object_list)
+# @app.route("/")
+# def index():
+#     movieList = get_csv()
+#     return render_template('index.html', movies = movieList)
 
 @app.route("/<Movie_Title>/")
 def detail(row_id):

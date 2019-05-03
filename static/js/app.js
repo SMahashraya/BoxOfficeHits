@@ -8,11 +8,6 @@ function init() {
               .text(sample)
               .property("value", sample);
       });
-      // dropdown_select.data(sampleNames)
-      // .enter()
-      // .append("option")
-      // .attr("value",data)
-      // .text(data)
 
       const firstSample = sampleNames[0];
       console.log(firstSample)
@@ -33,13 +28,7 @@ function buildMetadata(sample) {
       Object.entries(response).forEach(([key, value]) => {
         selectMetadata.append("p").text(`${key}: ${value}`);
       }); 
-      // {
-        // console.log(response)
-        //   var row = selectMetadata.append("p");
-        //   row.text(`${key}: ${value}`);
-        //   console.log(row)
-        //   console.log(row.text)
-      // });
+
   });
 };
 
