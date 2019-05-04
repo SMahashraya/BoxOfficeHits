@@ -3,7 +3,16 @@
     <head></head>
     <body>
         <h1>Movie Mojo Jojo Joe-Joes are like Oreos but not</h1>
-        {{ object_list }}
+        <table border = 1 cellpadding = 7>
+          <tr>
+            <th>Movie Title</th>
+          </tr>
+          {% for obj in object_list %}
+          <tr>
+            <td>{{obj.Title}}</td>
+          </tr>
+          {% endfor %}
+        </table>
     </body>
 </html>
 
