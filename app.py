@@ -17,7 +17,7 @@ def get_csv():
 @app.route("/")
 def index():
     object_list = get_csv()
-    return render_template('index.html', object_list=object_list)
+    return render_template('index.html', object_list = object_list)
 # @app.route("/")
 # def index():
 #     movieList = get_csv()
