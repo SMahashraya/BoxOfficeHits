@@ -1,5 +1,16 @@
-import dash
-import dash_core_components as dcc
-import dash_html_components as html
+import os
+import json
+
 import pandas as pd
-import plotly.graph_objs as go
+import numpy as np
+
+from flask import Flask, jsonify, render_template
+from flask_sqlalchemy import SQLAlchemy
+
+app = Flask(__name__)
+
+movies = pd.read_csv("db/movies.csv")
+movies.to_json(orient = "records")
+
+json.dump(movies)
+jsonfile.write('\n')
