@@ -2,6 +2,10 @@ from flask import Flask
 from flask import render_template
 app = Flask(__name__)
 import csv
+import plotly
+import pandas as pd
+import numpy as np
+import json
 
 def get_csv():
     csv_path = './db/movies.csv'
