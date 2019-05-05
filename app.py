@@ -11,6 +11,4 @@ app = Flask(__name__)
 
 movies = pd.read_csv("db/movies.csv")
 movies.to_json(orient = "records")
-
-json.dump(movies)
-jsonfile.write('\n')
+json.loads(movies)
