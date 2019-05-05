@@ -2,8 +2,6 @@ from flask import Flask
 from flask import render_template
 app = Flask(__name__)
 import csv
-import plotly
-import plotly.graph_objs as go
 import pandas as pd
 import numpy as np
 import json
@@ -14,19 +12,11 @@ def get_csv():
     csv_obj = csv.DictReader(csv_file)
     csv_list = list(csv_obj)
     return csv_list
-# def get_csv():
-#     p = './db/movies.csv'
-#     f = open(p, 'r')
-#     return list(csv.DictReader(f))
 
 @app.route("/")
 def index():
     object_list = get_csv()
     return render_template('index.html', object_list = object_list)
-# @app.route("/")
-# def index():
-#     movieList = get_csv()
-#     return render_template('index.html', movies = movieList)
 
 @app.route("/<Movie_Title>/")
 def detail(row_id):
