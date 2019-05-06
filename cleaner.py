@@ -22,8 +22,7 @@ fieldnames = ("close","movie_title","opening_theaters","opening_day_date",
 "rotten_tomatoes_score")
 
 with open ('db/movies.csv', 'r') as csvfile:
-    with open ('db/movies.csv', 'w') as jsonfile:
-        next(csvfile)
+    with open ('db/movies.json', 'w') as jsonfile:
         reader = csv.DictReader(csvfile, fieldnames)
         movies = {}
         for row in reader:
@@ -105,3 +104,4 @@ with open ('db/movies.csv', 'r') as csvfile:
                 "rotten_tomatoes_score": ["rotten_tomatoes_score"]
             }
         json.dump(movies, jsonfile)
+        jsonfile.write('\n')
