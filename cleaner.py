@@ -102,7 +102,6 @@ with open ('db/movies.csv', 'r') as csvfile:
                 "cyan": ["cyan"],
                 "blue": ["blue"],
                 "magenta": ["magenta"],
-                "rotten_tomatoes_score": ["rotten_tomatoes_score"],
+                "rotten_tomatoes_score": ["rotten_tomatoes_score"]
             }
         json.dump(movies, jsonfile)
-        jsonfile.write('\n')
