@@ -23,7 +23,7 @@ for row in reader:
     "IMDB id": row["imdbid"], 
     "Opening Gross": row["opening_gross_amount"], 
     "Opening Date": row["opening_day_date"], 
-    "Rotten Tomatoes Score": []}
+    "Rotten Tomatoes Score": row["rotten_tomatoes_score"]}
 
     if row["movie_title"] not in framenames:
         framenames.append(row["movie_title"])
