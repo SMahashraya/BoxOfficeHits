@@ -71,14 +71,14 @@ function xTextRefresh() {
 xTextRefresh();
 
 // Now we use xText to append three text SVG files, with y coordinates specified to space out the values.
-// 1. Genre
+// 1. IMDb Rating
 xText
   .append("text")
   .attr("y", -26)
-  .attr("data-name", "genre")
+  .attr("data-name", "imdbrating")
   .attr("data-axis", "x")
   .attr("class", "aText active x")
-  .text("Genre");
+  .text("IMDb Rating");
 // 2. Year
 xText
   .append("text")
@@ -91,10 +91,10 @@ xText
 xText
   .append("text")
   .attr("y", 26)
-  .attr("data-name", "poster_color")
+  .attr("data-name", "rotten_tomatoes_score")
   .attr("data-axis", "x")
   .attr("class", "aText inactive x")
-  .text("Poster color");
+  .text("Rotten Tomatoes Score");
 
 // B) Left Axis
 // ============
@@ -120,7 +120,7 @@ function yTextRefresh() {
 yTextRefresh();
 
 // Now we append the text.
-// 1. Obesity
+// 1. Total Gross
 yText
   .append("text")
   .attr("y", -26)
@@ -128,24 +128,6 @@ yText
   .attr("data-axis", "y")
   .attr("class", "aText active y")
   .text("Total Gross");
-
-// 2. Smokes
-yText
-  .append("text")
-  .attr("x", 0)
-  .attr("data-name", "rotten_tomatoes_score")
-  .attr("data-axis", "y")
-  .attr("class", "aText inactive y")
-  .text("Rotten Tomatoes Score");
-
-// 3. Lacks Healthcare
-yText
-  .append("text")
-  .attr("y", 26)
-  .attr("data-name", "imdbrating")
-  .attr("data-axis", "y")
-  .attr("class", "aText inactive y")
-  .text("IMDb Rating");
 
 // 2. Import our .csv file.
 // ========================
@@ -169,7 +151,7 @@ function visualize(theData) {
   // curX and curY will determine what data gets represented in each axis.
   // We designate our defaults here, which carry the same names
   // as the headings in their matching .csv data file.
-  var curX = "genre";
+  var curX = "imdbrating";
   var curY = "total_gross";
 
   // We also save empty variables for our the min and max values of x and y.
