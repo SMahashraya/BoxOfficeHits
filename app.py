@@ -1,6 +1,6 @@
 import csv, json
 
-f = open( 'movies.csv', 'rU')
+f = open( 'db/movies.csv', 'r')
 reader = csv.DictReader( f, fieldnames = ("close","movie_title","opening_theaters","opening_day_date",
 "opening_gross_amount","rank","studio","total_theaters","total_gross","year",
 "title","rated","released","runtime_in_min","genre","director","writer","actors",
