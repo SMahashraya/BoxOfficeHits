@@ -3,48 +3,65 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Flask Plotlyjs Example</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>Health Risk Factors</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/d3Style.css">
+
 </head>
 
 <body>
-
   <div class="container">
     <div class="row">
-      <div class="col-md-12 jumbotron text-center">
-        <h1>Movie Mojo Box Office Analysis</h1>
-        <p>Interact with the charts to explore what makes a hit or a flop!</p>
+      <div class="col-xs-12 col-md-12">
+        <h1>Health Risk Factors by Poverty, Income, and Age</h1>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-2">
-        <div class="well">
-          <h5>SELECT Movie:</h5>
-          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+      <div class="col-xs-12  col-md-9">
+        <div id="scatter">
+          <!-- We append our chart here. -->
         </div>
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">Movie Title</h3>
-          </div>
-          <div id="sample-metadata" class="panel-body"></div>
-        </div>
-      </div>
-      <div class="col-md-5">
-        <div id="pie"></div>
-      </div>
-      <div class="col-md-5">
-        <div id="gauge"></div>
       </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-      <div id="bubble"></div>
+    <div class="row">
+      <div class="col-xs-12  col-md-9">
+        <div class="article">
+          <h2>Correlations Discovered Between Health Risks and Age, Income</h2>
+          <p>The most conspicuous correlation is between Median Household Income and health risks, where the lower the median household income, the greater the risk of obesity, smoking, 
+            and lack of healthcare. Being in poverty is similarly if not as tightly correlated to these risks. One reason outright poverty might not be as highly correlated with lack of healthcare
+            could be government programs in some states that bridge the gap in care for anyone below a certain income threshold.
+          </p>
+
+          <p>An outlier in this data is Texas, where people of lower income but well above poverty are disporportionaly obese, smokers, and without healthcare.  
+            The outlier in the opposite direction is DC, where even though much of the state lives in poverty, not as many suffer from lack of healthcare. 
+            Texas and DC also diverge in terms of access to healthcare relative to age. Both have a median age of about 34. Whereas DC only has about 8% lacking healthcare, 
+            Texas has nearly a quarter of its population without healthcare."</p>
+
+          <p> Texas, along with Mississippi, Georgia, and South Carolina all fall into the quadrant of states with the highest rates of poverty and highest rates of people who are 
+            uninsured. These graphs could arguable make the case that these states suffer from their legislators' refusal to adopt the Medicaid Expansion under the Affordable Care Act.
+             However, states like Louisana, New Mexico, and Arkansas, who did expand Medicaid, represent anomalies that don't follow this trend and need a closer examination 
+             to explain their lack of health insurance. 
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 
+  <!-- Footer-->
+  <div id="footer">
+    <p>The Coding Boot Camp 2019</p>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.7.3/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+  <script type="text/javascript" src="assets/js/app.js"></script>
   <!-- <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -52,5 +69,4 @@
   <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 
 </body>
-
 </html>
