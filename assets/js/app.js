@@ -307,7 +307,7 @@ function visualize(theData) {
     })
     .attr("r", markerRadius)
     .attr("class", function(d) {
-      return "stateCircle " + d.abbr;
+      return "titleCircle " + d.abbr;
     })
     // Hover rules
     .on("mouseover", function(d) {
@@ -343,7 +343,7 @@ function visualize(theData) {
       return yScale(d[curY]) + markerRadius / 2.5;
     })
     .attr("font-size", markerRadius)
-    .attr("class", "stateText")
+    .attr("class", "titleText")
     // Hover Rules
     .on("mouseover", function(d) {
       // Show the tooltip
@@ -434,7 +434,22 @@ function visualize(theData) {
         // Update Y Axis
         svg.select(".yAxis").transition().duration(300).call(yAxis);
 
+        const colorValue = d => d.poster_color
         // With the axis changed, let's update the location of the state circles.
+        var colorScale = d3.scaleOrdinal() // D3 Version 4
+          .domain(['Black', 'White', 'Gray', 'NaN', 'Cyan', 'Yellow', 'Blue', 'Red',
+          'Green', 'Magenta'])
+          .fill(["#000000", 
+          "#FFFFFF" , "#A9A9A9", "#FFE4C4", "#00CED1", "#FFD700", "#1E90FF", "#B22222", "	#228B22", "	#C71585"]);
+        
+        d3.selectAll('circle').data(theData)
+        .enter().append('circle')
+          .attr('cx', d => xScale(xValue(d)))
+          .attr('cy', d => yScale(yValue(d)))
+          .attr('fill', d => colorScale(colorValue(d)))
+          .attr('fill-opacity', 0.6)
+          .attr('r', 8);
+
         d3.selectAll("circle").each(function() {
           // Each state circle gets a transition for it's new attribute.
           // This will lend the circle a motion tween
@@ -447,7 +462,7 @@ function visualize(theData) {
             })
             .duration(300);
         });
-
+        
         // We need change the location of the state texts, too.
         d3.selectAll(".titleText").each(function() {
           // We give each state text the same motion tween as the matching circle.
