@@ -71,30 +71,30 @@ function xTextRefresh() {
 xTextRefresh();
 
 // Now we use xText to append three text SVG files, with y coordinates specified to space out the values.
-// 1. Poverty
+// 1. Genre
 xText
   .append("text")
   .attr("y", -26)
-  .attr("data-name", "poverty")
+  .attr("data-name", "genre")
   .attr("data-axis", "x")
   .attr("class", "aText active x")
-  .text("In Poverty (%)");
-// 2. Age
+  .text("Genre");
+// 2. Year
 xText
   .append("text")
   .attr("y", 0)
-  .attr("data-name", "age")
+  .attr("data-name", "year")
   .attr("data-axis", "x")
   .attr("class", "aText inactive x")
-  .text("Age (Median)");
-// 3. Income
+  .text("Year");
+// 3. Poster Color
 xText
   .append("text")
   .attr("y", 26)
-  .attr("data-name", "income")
+  .attr("data-name", "poster_color")
   .attr("data-axis", "x")
   .attr("class", "aText inactive x")
-  .text("Household Income (Median)");
+  .text("Poster color");
 
 // B) Left Axis
 // ============
@@ -124,28 +124,28 @@ yTextRefresh();
 yText
   .append("text")
   .attr("y", -26)
-  .attr("data-name", "obesity")
+  .attr("data-name", "total_gross")
   .attr("data-axis", "y")
   .attr("class", "aText active y")
-  .text("Obese (%)");
+  .text("Total Gross");
 
 // 2. Smokes
 yText
   .append("text")
   .attr("x", 0)
-  .attr("data-name", "smokes")
+  .attr("data-name", "rotten_tomatoes_score")
   .attr("data-axis", "y")
   .attr("class", "aText inactive y")
-  .text("Smokes (%)");
+  .text("Rotten Tomatoes Score");
 
 // 3. Lacks Healthcare
 yText
   .append("text")
   .attr("y", 26)
-  .attr("data-name", "healthcare")
+  .attr("data-name", "imdbrating")
   .attr("data-axis", "y")
   .attr("class", "aText inactive y")
-  .text("Lacks Healthcare (%)");
+  .text("IMDb Rating");
 
 // 2. Import our .csv file.
 // ========================
@@ -154,7 +154,7 @@ yText
 // by the Behavioral Risk Factor Surveillance System.
 
 // Import our CSV data with d3's .csv import method.
-d3.csv("assets/data/data.csv", function(data) {
+d3.csv("assets/data/movies.csv", function(data) {
     visualize(data)
     console.log(data);
   });
@@ -169,8 +169,8 @@ function visualize(theData) {
   // curX and curY will determine what data gets represented in each axis.
   // We designate our defaults here, which carry the same names
   // as the headings in their matching .csv data file.
-  var curX = "poverty";
-  var curY = "obesity";
+  var curX = "genre";
+  var curY = "total_gross";
 
   // We also save empty variables for our the min and max values of x and y.
   // this will allow us to alter the values in functions and remove repetitious code.
@@ -188,11 +188,11 @@ function visualize(theData) {
       // x key
       var theX;
       // Grab the state name.
-      var theState = "<div>" + d.state + "</div>";
+      var theTitle = "<div>" + d.title + "</div>";
       // Snatch the y value's key and value.
       var theY = "<div>" + curY + ": " + d[curY] + "%</div>";
       // If the x key is poverty
-      if (curX === "poverty") {
+      if (curX === "genre") {
         // Grab the x key and a version of the value formatted to show percentage
         theX = "<div>" + curX + ": " + d[curX] + "%</div>";
       }
@@ -206,7 +206,7 @@ function visualize(theData) {
           "</div>";
       }
       // Display what we capture.
-      return theState + theX + theY;
+      return theTitle + theX + theY;
     });
   // Call the toolTip function.
   svg.call(toolTip);
@@ -424,7 +424,7 @@ function visualize(theData) {
         });
 
         // We need change the location of the state texts, too.
-        d3.selectAll(".stateText").each(function() {
+        d3.selectAll(".titleText").each(function() {
           // We give each state text the same motion tween as the matching circle.
           d3
             .select(this)
@@ -467,7 +467,7 @@ function visualize(theData) {
         });
 
         // We need change the location of the state texts, too.
-        d3.selectAll(".stateText").each(function() {
+        d3.selectAll(".titleText").each(function() {
           // We give each state text the same motion tween as the matching circle.
           d3
             .select(this)
