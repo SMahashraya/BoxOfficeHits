@@ -1,79 +1,75 @@
-﻿"""close""","""movie_title""","""opening_theaters""","""opening_day_date""","""opening_gross_amount""","""rank""","""studio""","""total_theaters""","""total_gross""","""year""","""title""","""rated""","""released""","""runtime_in_min""","""genre""","""director""","""writer""","""actors""","""plot""","""language""","""country""","""awards""","""poster""","""ratings""","""metascore""","""imdbrating""","""imdbvotes""","""imdbid""","""dvd""","""boxoffice""","""production""","""website""","""action""","""adventure""","""animation""","""biography""","""comedy""","""crime""","""documentary""","""drama""","""family""","""fantasy""","""film_noir""","""history""","""horror""","""music""","""musical""","""mystery""","""romance""","""sci-fi""","""short""","""sport""","""superhero""","""thriller""","""war""","""western""","""actors_avg_total_gross""","""actors_avg_number_of_movies""","""actors_avg_best_picture_gross""","""director_total_gross""","""director_number_of_movies""","""director_best_picture_gross""","""title_negative_sentiment""","""title_neutral_sentiment""","""title_positive_sentiment""","""title_compound_sentiment""","""poster_color""","""black""","""white""","""gray""","""red""","""yellow""","""green""","""cyan""","""blue""","""magenta""","""rotten_tomatoes_score"""
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""close"",""movie_title"",""opening_theaters"",""opening_day_date"",""opening_gross_amount"",""rank"",""studio"",""total_theaters"",""total_gross"",""year"",""title"",""rated"",""released"",""runtime_in_min"",""genre"",""director"",""writer"",""actors"",""plot"",""language"",""country"",""awards"",""poster"",""ratings"",""metascore"",""imdbrating"",""imdbvotes"",""imdbid"",""dvd"",""boxoffice"",""production"",""website"",""action"",""adventure"",""animation"",""biography"",""comedy"",""crime"",""documentary"",""drama"",""family"",""fantasy"",""film_noir"",""history"",""horror"",""music"",""musical"",""mystery"",""romance"",""sci-fi"",""short"",""sport"",""superhero"",""thriller"",""war"",""western"",""actors_avg_total_gross"",""actors_avg_number_of_movies"",""actors_avg_best_picture_gross"",""director_total_gross"",""director_number_of_movies"",""director_best_picture_gross"",""title_negative_sentiment"",""title_neutral_sentiment"",""title_positive_sentiment"",""title_compound_sentiment"",""poster_color"",""black"",""white"",""gray"",""red"",""yellow"",""green"",""cyan"",""blue"",""magenta"",""rotten_tomatoes_score""",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""close""",:,[,"""close""",],",","""close"": [""close""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""opening_theaters""",:,[,"""opening_theaters""",],",","""opening_theaters"": [""opening_theaters""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""opening_day_date""",:,[,"""opening_day_date""",],",","""opening_day_date"": [""opening_day_date""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""opening_gross_amount""",:,[,"""opening_gross_amount""",],",","""opening_gross_amount"": [""opening_gross_amount""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""rank""",:,[,"""rank""",],",","""rank"": [""rank""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""studio""",:,[,"""studio""",],",","""studio"": [""studio""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""total_theaters""",:,[,"""total_theaters""",],",","""total_theaters"": [""total_theaters""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""total_gross""",:,[,"""total_gross""",],",","""total_gross"": [""total_gross""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""year""",:,[,"""year""",],",","""year"": [""year""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""rated""",:,[,"""rated""",],",","""rated"": [""rated""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""released""",:,[,"""released""",],",","""released"": [""released""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""runtime_in_min""",:,[,"""runtime_in_min""",],",","""runtime_in_min"": [""runtime_in_min""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""genre""",:,[,"""genre""",],",","""genre"": [""genre""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""director""",:,[,"""director""",],",","""director"": [""director""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""writer""",:,[,"""writer""",],",","""writer"": [""writer""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""actors""",:,[,"""actors""",],",","""actors"": [""actors""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""plot""",:,[,"""plot""",],",","""plot"": [""plot""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""language""",:,[,"""language""",],",","""language"": [""language""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""country""",:,[,"""country""",],",","""country"": [""country""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""awards""",:,[,"""awards""",],",","""awards"": [""awards""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""poster""",:,[,"""poster""",],",","""poster"": [""poster""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""ratings""",:,[,"""ratings""",],",","""ratings"": [""ratings""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""metascore""",:,[,"""metascore""",],",","""metascore"": [""metascore""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""imdbrating""",:,[,"""imdbrating""",],",","""imdbrating"": [""imdbrating""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""imdbvotes""",:,[,"""imdbvotes""",],",","""imdbvotes"": [""imdbvotes""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""imdbid""",:,[,"""imdbid""",],",","""imdbid"": [""imdbid""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""dvd""",:,[,"""dvd""",],",","""dvd"": [""dvd""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""boxoffice""",:,[,"""boxoffice""",],",","""boxoffice"": [""boxoffice""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""production""",:,[,"""production""",],",","""production"": [""production""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""website""",:,[,"""website""",],",","""website"": [""website""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""action""",:,[,"""action""",],",","""action"": [""action""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""adventure""",:,[,"""adventure""",],",","""adventure"": [""adventure""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""animation""",:,[,"""animation""",],",","""animation"": [""animation""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""biography""",:,[,"""biography""",],",","""biography"": [""biography""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""comedy""",:,[,"""comedy""",],",","""comedy"": [""comedy""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""crime""",:,[,"""crime""",],",","""crime"": [""crime""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""documentary""",:,[,"""documentary""",],",","""documentary"": [""documentary""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""drama""",:,[,"""drama""",],",","""drama"": [""drama""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""family""",:,[,"""family""",],",","""family"": [""family""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""fantasy""",:,[,"""fantasy""",],",","""fantasy"": [""fantasy""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""film_noir""",:,[,"""film_noir""",],",","""film_noir"": [""film_noir""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""history""",:,[,"""history""",],",","""history"": [""history""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""horror""",:,[,"""horror""",],",","""horror"": [""horror""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""music""",:,[,"""music""",],",","""music"": [""music""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""musical""",:,[,"""musical""",],",","""musical"": [""musical""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""mystery""",:,[,"""mystery""",],",","""mystery"": [""mystery""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""romance""",:,[,"""romance""",],",","""romance"": [""romance""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""sci-fi""",:,[,"""sci-fi""",],",","""sci-fi"": [""sci-fi""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""short""",:,[,"""short""",],",","""short"": [""short""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""sport""",:,[,"""sport""",],",","""sport"": [""sport""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""superhero""",:,[,"""superhero""",],",","""superhero"": [""superhero""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""thriller""",:,[,"""thriller""",],",","""thriller"": [""thriller""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""war""",:,[,"""war""",],",","""war"": [""war""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""western""",:,[,"""western""",],",","""western"": [""western""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""actors_avg_total_gross""",:,[,"""actors_avg_total_gross""",],",","""actors_avg_total_gross"": [""actors_avg_total_gross""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""actors_avg_number_of_movies""",:,[,"""actors_avg_number_of_movies""",],",","""actors_avg_number_of_movies"": [""actors_avg_number_of_movies""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""actors_avg_best_picture_gross""",:,[,"""actors_avg_best_picture_gross""",],",","""actors_avg_best_picture_gross"": [""actors_avg_best_picture_gross""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""director_total_gross""",:,[,"""director_total_gross""",],",","""director_total_gross"": [""director_total_gross""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""director_number_of_movies""",:,[,"""director_number_of_movies""",],",","""director_number_of_movies"": [""director_number_of_movies""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""director_best_picture_gross""",:,[,"""director_best_picture_gross""",],",","""director_best_picture_gross"": [""director_best_picture_gross""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""title_negative_sentiment""",:,[,"""title_negative_sentiment""",],",","""title_negative_sentiment"": [""title_negative_sentiment""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""title_neutral_sentiment""",:,[,"""title_neutral_sentiment""",],",","""title_neutral_sentiment"": [""title_neutral_sentiment""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""title_positive_sentiment""",:,[,"""title_positive_sentiment""",],",","""title_positive_sentiment"": [""title_positive_sentiment""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""title_compound_sentiment""",:,[,"""title_compound_sentiment""",],",","""title_compound_sentiment"": [""title_compound_sentiment""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""poster_color""",:,[,"""poster_color""",],",","""poster_color"": [""poster_color""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""black""",:,[,"""black""",],",","""black"": [""black""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""white""",:,[,"""white""",],",","""white"": [""white""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""gray""",:,[,"""gray""",],",","""gray"": [""gray""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""red""",:,[,"""red""",],",","""red"": [""red""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""yellow""",:,[,"""yellow""",],",","""yellow"": [""yellow""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""green""",:,[,"""green""",],",","""green"": [""green""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""cyan""",:,[,"""cyan""",],",","""cyan"": [""cyan""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""blue""",:,[,"""blue""",],",","""blue"": [""blue""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""magenta""",:,[,"""magenta""",],",","""magenta"": [""magenta""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"""rotten_tomatoes_score""",:,[,"""rotten_tomatoes_score""",],",","""rotten_tomatoes_score"": [""rotten_tomatoes_score""],",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+﻿"""Closing Date""",:,[,"""close""",],","
+"""Opening Theaters Played""",:,[,"""opening_theaters""",],","
+"""Opening Date""",:,[,"""opening_day_date""",],","
+"""Opening Gross""",:,[,"""opening_gross_amount""",],","
+"""Rank""",:,[,"""rank""",],","
+"""Studio""",:,[,"""studio""",],","
+"""Total Theaters Played""",:,[,"""total_theaters""",],","
+"""Total Gross""",:,[,"""total_gross""",],","
+"""Year""",:,[,"""year""",],","
+"""Rated""",:,[,"""rated""",],","
+"""Released""",:,[,"""released""",],","
+"""Runtime in Minutes""",:,[,"""runtime_in_min""",],","
+"""Genre""",:,[,"""genre""",],","
+"Director""",:,[,"""director""",],","
+"""Writer""",:,[,"""writer""",],","
+"""Actors""",:,[,"""actors""",],","
+"""Plot""",:,[,"""plot""",],","
+"""Language""",:,[,"""language""",],","
+"""Country""",:,[,"""country""",],","
+"""Awards""",:,[,"""awards""",],","
+"""Poster""",:,[,"""poster""",],","
+"""Ratings""",:,[,"""ratings""",],","
+"""Metascore""",:,[,"""metascore""",],","
+"""IMDb Rating""",:,[,"""imdbrating""",],","
+"""IMDb Vote Total""",:,[,"""imdbvotes""",],","
+"""IMDb ID""",:,[,"""imdbid""",],","
+"""Released to DVD""",:,[,"""dvd""",],","
+"""Box Office""",:,[,"""boxoffice""",],","
+"""Production""",:,[,"""production""",],","
+"""Website""",:,[,"""website""",],","
+"""Action""",:,[,"""action""",],","
+"""Adventure""",:,[,"""adventure""",],","
+"""Animation""",:,[,"""animation""",],","
+"""Biography""",:,[,"""biography""",],","
+"""Comedy""",:,[,"""comedy""",],","
+,:,[,"""crime""",],","
+,:,[,"""documentary""",],","
+,:,[,"""drama""",],","
+,:,[,"""family""",],","
+,:,[,"""fantasy""",],","
+,:,[,"""film_noir""",],","
+,:,[,"""history""",],","
+,:,[,"""horror""",],","
+,:,[,"""music""",],","
+,:,[,"""musical""",],","
+,:,[,"""mystery""",],","
+,:,[,"""romance""",],","
+,:,[,"""sci-fi""",],","
+,:,[,"""short""",],","
+,:,[,"""sport""",],","
+,:,[,"""superhero""",],","
+,:,[,"""thriller""",],","
+,:,[,"""war""",],","
+,:,[,"""western""",],","
+,:,[,"""actors_avg_total_gross""",],","
+,:,[,"""actors_avg_number_of_movies""",],","
+,:,[,"""actors_avg_best_picture_gross""",],","
+,:,[,"""director_total_gross""",],","
+,:,[,"""director_number_of_movies""",],","
+,:,[,"""director_best_picture_gross""",],","
+,:,[,"""title_negative_sentiment""",],","
+,:,[,"""title_neutral_sentiment""",],","
+,:,[,"""title_positive_sentiment""",],","
+,:,[,"""title_compound_sentiment""",],","
+,:,[,"""poster_color""",],","
+,:,[,"""black""",],","
+,:,[,"""white""",],","
+,:,[,"""gray""",],","
+,:,[,"""red""",],","
+,:,[,"""yellow""",],","
+,:,[,"""green""",],","
+,:,[,"""cyan""",],","
+,:,[,"""blue""",],","
+,:,[,"""magenta""",],","
+,:,[,"""rotten_tomatoes_score""",],","
