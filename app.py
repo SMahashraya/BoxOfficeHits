@@ -13,5 +13,8 @@ app = Flask(__name__)
 def index():
     return render_template('index.html', data = 'movies.json')
 
+@app.route('/<movie_title>')
+def title(movie_title):
+    
 if __name__ == '__main__':
     app.run(debug = True, use_reloader = True)
