@@ -88,12 +88,12 @@ yText
 .attr("class", "aText active y")
 .text("Total Gross");
 
-d3.csv("movies.csv", function(data) {
+d3.csv("data/movies.csv", function(data) {
     visualize(data)
     console.log(data);
 });
 
-d3.csv("movies.csv", function(error, data) {
+d3.csv("data/movies.csv", function(error, data) {
   console.log(error)
   data.forEach(function(d) {
     d.imdbrating = +d.imdbrating;

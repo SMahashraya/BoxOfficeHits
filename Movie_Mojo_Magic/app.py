@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    df = pd.read_csv("templates/movies.csv")
+    df = pd.read_csv("data/movies.csv")
     chart_data = df.to_dict(orient = "records")
     chart_data = json.dumps(chart_data, indent = 2)
     data = {"chart_data": chart_data}
