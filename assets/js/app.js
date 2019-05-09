@@ -93,7 +93,7 @@ d3.csv("assets/data/movies.csv", function(data) {
     console.log(data);
 });
 
-var allYears = d3.map(data, function(d){return(d.year)}).keys()
+var allYears = d3.map(theData, function(d){return(d.year)}).keys()
 
 d3.select("#selectButton") 
     .selectAll("myYears")
