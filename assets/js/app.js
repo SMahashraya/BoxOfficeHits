@@ -93,15 +93,32 @@ d3.csv("assets/data/movies.csv", function(data) {
     console.log(data);
 });
 
-var allYears = d3.map(theData, function(d){return(d.year)}).keys()
-
-d3.select("#selectButton") 
+d3.csv("assets/data/movies.csv", function(error, data) {
+  console.log(error)
+  data.forEach(function(d) {
+    d.imdbrating = +d.imdbrating;
+    d.rotten_tomatoes_score = +d.rotten_tomatoes_score;
+    d.year = +d.year;
+    d.metascore = +d.metascore;
+  });
+  var allYears = d3.map(data, function(d){return(d.year)}).keys()
+  d3.select("#selectButton") 
     .selectAll("myYears")
     .data(allYears)
     .enter()
     .append('year')
     .text(function (d) { return d; })
     .attr("value", function (d) { return d; })
+
+  function update(selectedData) {
+    var dataFilter = data.filter(function(d){return d.year == selectedData})
+    theCircles
+      .datum(dataFilter)
+      .transition()
+      .duration(1000)
+    }
+  }
+)
 
 function visualize(theData) {
     var curX = "imdbrating";
@@ -159,7 +176,7 @@ function visualize(theData) {
     clickedText.classed("inactive", false).classed("active", true);
     }
 
-    xMinMAx();
+    xMinMax();
     yMinMax();
 
     var xScale = d3
@@ -303,13 +320,4 @@ function visualize(theData) {
           }
         }
     });
-
-    function update(selectedData) {
-      var dataFilter = data.filter(function(d){return d.year == selectedData})
-      theCircles
-        .datum(dataFilter)
-        .transition()
-        .duration(1000)
-
-    }
 }
