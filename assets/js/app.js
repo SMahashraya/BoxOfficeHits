@@ -109,7 +109,7 @@ d3.csv("assets/data/movies.csv", function(error, data) {
     .append('year')
     .text(function (d) { return d; })
     .attr("value", function (d) { return d; })
-
+  
   function update(selectedData) {
     var dataFilter = data.filter(function(d){return d.year == selectedData})
     theCircles
@@ -117,6 +117,12 @@ d3.csv("assets/data/movies.csv", function(error, data) {
       .transition()
       .duration(1000)
     }
+    d3.select("#selectButton").on("change", function(d) {
+      // recover the option that has been chosen
+      var selectedOption = d3.select(this).property("value")
+      // run the updateChart function with this selected option
+      update(selectedOption)
+  })
   }
 )
 
