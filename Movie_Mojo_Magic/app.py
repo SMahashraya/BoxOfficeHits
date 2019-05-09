@@ -15,8 +15,5 @@ def index():
     data = {"chart_data": chart_data}
     return render_template("index.html", data=data)
 
-# @app.route("/<year>")
-# def year(data):
-
 if __name__ == "__main__":
     app.run(debug=True)
