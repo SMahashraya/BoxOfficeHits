@@ -39,7 +39,7 @@ var svg = d3
     );
   }
   xTextRefresh();
-
+// 1. IMDb Rating
   xText
   .append("text")
   .attr("y", -26)
@@ -47,15 +47,15 @@ var svg = d3
   .attr("data-axis", "x")
   .attr("class", "aText active x")
   .text("IMDb Rating");
-// 2. Year
+// 2. MetaScore
 xText
   .append("text")
   .attr("y", 0)
-  .attr("data-name", "year")
+  .attr("data-name", "metascore")
   .attr("data-axis", "x")
   .attr("class", "aText inactive x")
-  .text("Year");
-// 3. Poster Color
+  .text("Metascore");
+// 3. Rotten Tomatoes Score
 xText
   .append("text")
   .attr("y", 26)
@@ -94,21 +94,12 @@ d3.csv("assets/data/movies.csv", function(data) {
 });
 
 var allYears = d3.map(data, function(d){return(d.year)}).keys()
-var allGenres = d3.map(data, function(d){return(d.genre)}).keys()
 
-d3.select("#selectButton1") 
+d3.select("#selectButton") 
     .selectAll("myYears")
     .data(allYears)
     .enter()
     .append('year')
-    .text(function (d) { return d; })
-    .attr("value", function (d) { return d; })
-
-d3.select("#selectButton2") 
-    .selectAll("myGenres")
-    .data(allGenres)
-    .enter()
-    .append('genre')
     .text(function (d) { return d; })
     .attr("value", function (d) { return d; })
 
@@ -214,6 +205,7 @@ function visualize(theData) {
     .range(["#000000", "#FFFFFF", "#808080", "#E9967A", "##00FFFF", "#FF00FF", "#FFE933", "#FF3333", "#4933FF" ])
     theCircles
     .append("circle")
+    
     // These attr's specify location, size and class.
     .attr("cx", function(d) {
       return xScale(d[curX]);
